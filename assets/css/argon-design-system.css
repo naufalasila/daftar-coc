@@ -299,6 +299,7 @@ button,
 [type="reset"],
 [type="submit"] {
   -webkit-appearance: button;
+  appearance: button;
 }
 
 button:not(:disabled),
@@ -327,6 +328,7 @@ input[type="time"],
 input[type="datetime-local"],
 input[type="month"] {
   -webkit-appearance: listbox;
+  appearance: listbox;
 }
 
 textarea {
@@ -365,6 +367,7 @@ progress {
 [type="search"] {
   outline-offset: -2px;
   -webkit-appearance: none;
+  appearance: none;
 }
 
 [type="search"]::-webkit-search-decoration {
@@ -21905,8 +21908,8 @@ span.flatpickr-weekday {
 }
 
 .flatpickr-weekwrapper {
-  display: inline-block;
-  float: left;
+  display: flex;
+  align-items: flex-start;
 }
 
 .flatpickr-weekwrapper .flatpickr-weeks {
@@ -21979,7 +21982,8 @@ span.flatpickr-weekday {
   flex: 1;
   width: 40%;
   height: 40px;
-  float: left;
+  display: inline-block;
+  vertical-align: top;
 }
 
 .flatpickr-time .numInputWrapper span.arrowUp:after {
@@ -22037,7 +22041,7 @@ span.flatpickr-weekday {
 .flatpickr-time .flatpickr-am-pm {
   height: inherit;
   display: inline-block;
-  float: left;
+  vertical-align: top;
   line-height: inherit;
   color: #393939;
   font-weight: bold;
@@ -23395,7 +23399,9 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   display: inline-block;
   vertical-align: middle;
   text-decoration: none;
+  -webkit-appearance: none;
   -moz-appearance: none;
+  appearance: none;
   cursor: pointer;
   width: 100%;
   margin: .5rem 0;
@@ -23852,6 +23858,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 
 .ct-footer-links li {
   display: inline-block;
+  vertical-align: top;
 }
 
 .ct-footer-links li+li {
@@ -24288,7 +24295,7 @@ pre>code.highlight {
 }
 
 .ct-sidebar .nav>li>a {
-  display: block;
+  display: inline-block;
   padding: .25rem 1.5rem;
   font-size: 84%;
   color: #4c555a;
@@ -24332,6 +24339,7 @@ pre>code.highlight {
 }
 
 .scrollbar-inner .scroll-element {
+  display: inline-block;
   transition: opacity 300ms;
   margin-right: 2px;
 }
